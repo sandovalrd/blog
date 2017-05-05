@@ -6,12 +6,12 @@
 	<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}">
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container">
 		<section>
 			@include('admin.template.nav')
 		</section>
 		<section>
-			@yield('content')
+			@yield('content','<hr> Contenido <hr>')
 		</section>
 		<section>
 			@include('admin.template.footer')		

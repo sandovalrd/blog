@@ -14,6 +14,7 @@ class UsersController extends Controller
     public function index()
     {
         //
+        echo "Controller index ";
     }
 
     /**
@@ -24,6 +25,7 @@ class UsersController extends Controller
     public function create()
     {
         return view('admin.users.create');
+
     }
 
     /**
@@ -46,6 +48,7 @@ class UsersController extends Controller
     public function show($id)
     {
         //
+        echo "Hola Mundo " . $id;
     }
 
     /**
