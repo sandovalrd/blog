@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class UsersController extends Controller
 {
@@ -14,7 +15,9 @@ class UsersController extends Controller
     public function index()
     {
         //
-        echo "Controller index ";
+        $users = User::orderby('id', 'ASC')->paginate(10);
+
+        return view('admin.users.index')->with('users',$users);
     }
 
     /**
@@ -37,7 +40,14 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         //
-    }
+        $user = new User($request->all());
+        $user->password = bcrypt($request->password);
+        $user->save();
+
+        $users = User::orderby('id', 'ASC')->paginate(10);
+
+        return view('admin.users.index')->with('users',$users);
+     }   
 
     /**
      * Display the specified resource.
