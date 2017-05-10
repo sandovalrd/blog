@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Laracasts\Flash\Flash;
 
 class UsersController extends Controller
 {
@@ -15,8 +16,7 @@ class UsersController extends Controller
     public function index()
     {
         //
-        $users = User::orderby('id', 'ASC')->paginate(10);
-
+        $users = User::orderby('id', 'ASC')->paginate(12);
         return view('admin.users.index')->with('users',$users);
     }
 
@@ -44,9 +44,9 @@ class UsersController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
 
-        $users = User::orderby('id', 'ASC')->paginate(10);
+        Flash('Usuario creado con exito!')->success()->important();
 
-        return view('admin.users.index')->with('users',$users);
+        return redirect()->route('users.index');
      }   
 
     /**
@@ -58,7 +58,6 @@ class UsersController extends Controller
     public function show($id)
     {
         //
-        echo "Hola Mundo " . $id;
     }
 
     /**

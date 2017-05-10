@@ -2,7 +2,7 @@
 
 @section('title', 'Crear Usuario')
 
-@section('sub-title', 'Crear Usuario')
+@section('sub-title', 'Ristrar Usuario')
 
 @section('content')
 
@@ -38,7 +38,7 @@
 		</div>
 
 		<div class="form-group">
-			<div class="col-md-offset-2 col-md-8">
+			<div class="col-md-offset-2	col-md-8">
 				{!! Form::submit('Registrar', ['class' => 'btn btn-primary']) !!}
 			</div>
 		</div>

@@ -5,6 +5,7 @@
 @section('sub-title', 'Lista de Usuarios')
 
 
+
 @section('content')
 		
 	<table class="table table-striped">
@@ -36,7 +37,11 @@
 			@endforeach
 		</tbody>
 	</table>
-	{!! $users->render() !!}
+	<div class="row">
+		<div class="col-md-12 text-right">
+			{!! $users->render() !!}
+		</div>
+	</div>
 	<div class="row">
 		<div class="col-md-2">
 			<a href="{{ route('users.create') }}" class="btn btn-primary">Registrar</a>

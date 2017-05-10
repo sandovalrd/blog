@@ -17,12 +17,13 @@
 				</div>
 				<div class="panel-body">
 					<br>
+					@include('flash::message')
 					@yield('content')
 				</div>
 			</div>
 		</section>
 		<section>
-			@include('admin.template.footer')				
+			
 		</section>
 	</div>
 		
