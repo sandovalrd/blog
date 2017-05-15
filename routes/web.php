@@ -11,6 +11,18 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('home',	function(){
     return view('welcome');
+});
+
+Route::group (['prefix' => 'admin'], function(){
+
+	Route::resource('users','UsersController');
+
+	Route::get('users/{id}/destroy',[
+	'uses'  => 'UsersController@destroy',
+	'as'	=> 'users.destroy'
+
+	]);
+
 });

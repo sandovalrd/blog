@@ -40,3 +40,4 @@ class CreateTagsTable extends Migration
         Schema::dropIfExists('tags');
     }
 }
+git ch
