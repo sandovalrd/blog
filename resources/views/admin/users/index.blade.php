@@ -22,7 +22,7 @@
 				<td>{{ $user->id }}</td>
 				<td>{{ $user->name }}</td>
 				<td>{{ $user->email }}</td>
-				<td class='center'>
+				<td>
 					@if($user->type=='admin')
 						<spam class="label label-danger">{{ $user->type }}</spam>
 					@else
@@ -30,7 +30,7 @@
 					@endif
 				</td>
 				<td>
-					<a href="" class="btn btn-danger"></a> <a href="" class="btn btn-warning"></a>
+					<a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning"><spam class="glyphicon glyphicon-wrench" aria-hidden="true"></spam></a> <a href="{{ route('users.destroy', $user->id) }}" onclick="return confirm('Seguro que desea Elimnarlo?')" class="btn btn-danger"><spam class="glyphicon glyphicon-remove-circle" aria-hidden="true"></spam></a>
 				</td>
 				
 			</tr>
