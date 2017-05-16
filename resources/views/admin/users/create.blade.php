@@ -6,7 +6,6 @@
 
 @section('content')
 
-	
 	{!! Form::open(['route' => 'users.store', 'method'=>'POST', 'class'=>'form-horizontal']) !!}
 
 		<div class="form-group">

@@ -18,6 +18,7 @@
 				<div class="panel-body">
 					<br>
 					@include('flash::message')
+					@include('admin.users.error')
 					@yield('content')
 				</div>
 			</div>
