@@ -4,17 +4,15 @@
 
 @section('sub-title', 'Lista de Usuarios')
 
-
-
 @section('content')
 		
 	<table class="table table-striped">
 		<thead>
-			<th>ID</th>
+			<th>Id</th>
 			<th>Nombre</th>
 			<th>Email</th>
 			<th>Tipo</th>
-			<th>Accion</th>
+			<th class="text-center" width="120px">Accion</th>
 		</thead>
 		<tbody>
 			@foreach($users as $user)

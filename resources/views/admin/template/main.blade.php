@@ -18,7 +18,7 @@
 				<div class="panel-body">
 					<br>
 					@include('flash::message')
-					@include('admin.users.error')
+					@include('admin.template.error')
 					@yield('content')
 				</div>
 			</div>

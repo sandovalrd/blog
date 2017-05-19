@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="{{ route('users.index') }}">Usuarios <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Categorias</a></li>
+        <li><a href="{{ route('categories.index') }}">Categor&iacute;as</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administracion <span class="caret"></span></a>
           <ul class="dropdown-menu">
